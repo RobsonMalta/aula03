@@ -24,4 +24,12 @@ public class ContatoTest {
 		cdao.inserir(contato);
 		assertTrue("O contato n√£o foi adicionado.", cdao.existe(contato));
 	}
+	
+	@Test
+	public void testRobson(){
+		int size = cdao.lerTodos().size();
+		cdao.inserir(contato);
+		assertTrue("O contato n„o foi adicionado", size<=cdao.lerTodos().size());
+		
+	}
 }
